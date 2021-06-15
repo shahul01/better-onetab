@@ -158,18 +158,24 @@
               ></v-checkbox>
             </v-list-tile-action>
             <v-list-tile-content>
-              <v-list-tile-title>
+              <v-list-tile-title
+                class="url-title"
+              >
                 <v-avatar
                   tile
                   size="16"
                   color="grey lighten-4"
                   v-if="!opts.hideFavicon"
+                  class="url-icon"
                 >
                   <img :src="tab.favIconUrl ? tab.favIconUrl : `https://www.google.com/s2/favicons?domain=${getDomain(tab.url)}`">
                 </v-avatar>
                 {{ opts.itemDisplay === 'url' ? tab.url : tab.title }}
               </v-list-tile-title>
-              <v-list-tile-sub-title v-if="opts.itemDisplay === 'title-and-url'">
+              <v-list-tile-sub-title
+                v-if="opts.itemDisplay === 'title-and-url'"
+                class="url-sub-title"
+              >
                 {{ tab.url }}
               </v-list-tile-sub-title>
             </v-list-tile-content>
